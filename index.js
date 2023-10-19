@@ -1,14 +1,13 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express()
 const port = process.env.PORT;
+app.use(cors());
 
-// mongoose.connect('mongodb://127.0.0.1:27017/chatApp')
-// mongoose.connect('mongodb://localhost:27017/chatApp', {useNewUrlParser: true})
-//     .catch((err) => console.log('Error connecting to DB: ', err))
-//     .then(() => console.log('Connected!'));
+
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
@@ -20,9 +19,6 @@ app.use('/subscribers', subscriberRoutes);
 todoRoutes = require('./routes/todos');
 app.use('/todos', todoRoutes);
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World')
-// });
 
 var books = [
     {
