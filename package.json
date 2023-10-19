@@ -1,11 +1,12 @@
 {
-  "name": "chat-express",
+  "name": "scoot-backend",
   "version": "1.0.0",
   "description": "Chat express backend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart": "nodemon index.js"
+    "devStart": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Paul Okwechime",
   "license": "ISC",
