@@ -6,16 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "npm i"
   },
   "author": "Paul Okwechime",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^7.4.3"
-  },
-  "devDependencies": {
+    "mongoose": "^7.4.3",
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.20.0 <19.0.0"
   }
 }
